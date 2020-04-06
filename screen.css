@@ -1,0 +1,131 @@
+html, body, .grid-container {
+  margin: 0;
+  background: #eee;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  margin: 5vh 0 0 5vw;
+}
+
+.grid-container * {
+ border: 0;
+ position: relative;
+}
+
+.grid-container *:after {
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.zone-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+
+.zone-1 {
+  grid-area: 1 / 4 / 7 / 7;
+  z-index: 1;
+  background-image: url("https://images.pexels.com/photos/1722092/pexels-photo-1722092.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=600h&w=300");
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+}
+
+.zone-2 {
+  grid-area: 2 / 2 / 4 / 5;
+  z-index: 2;
+  background-color: #fff;
+  margin: 50px;
+  width: 350px;
+  height: 50px;
+}
+
+.zone-3 {
+  grid-area: 5 / 3 / 8 / 6;
+  z-index: 0;
+  margin-left: 10px;
+  width: 375px;
+  height: 245px;
+  background-color: #02253A;
+}
+
+.zone-4 {
+  grid-area: 4 / 7 / 10 / 8;
+  z-index: 4;
+  background-color: #FF7200;
+  margin-left: -200px;
+  width: 100px;
+  height: 250px;
+}
+
+.zone-5 {
+  grid-area: 4 / 3 / 6 / 5;
+  z-index: 5;
+  width: 450px;
+  height: 120px;
+  margin: 2vw 0 0 -3vw;
+}
+
+#text-zone1 {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-family: OrkneyRegular;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  line-height: 8px;
+  color: white;
+}
+
+#text-zone2 {
+  font-family: OrkneyRegular;
+  font-size: 140px;
+  font-weight: 900;
+  text-shadow: 0px 1px, 2px 0px, 2px 1px;
+  font-style: italic;
+  letter-spacing: -15px;
+  word-spacing: 2px;
+  line-height: 8px;
+  color: #FF7200;
+}
+
+#text-zone3 {
+  font-family: NowLight;
+  font-size: 40px;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  line-height: 0px;
+}
+
+#text-zone4 {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-transform: uppercase;
+  font-family: NimbusSanLConRegular;
+  font-size: 62px;
+  font-weight: 900;
+  text-shadow: 0px 1px, 2px 0px, 2px 1px;
+  font-style: italic;
+  letter-spacing: -15px;
+  line-height: 0.70;
+  color: white;
+}
+
+#text-zone5 {
+  font-family: ArchivoBlackRegular;
+  font-size: 130px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 0.70;
+  color: rgba(0, 0, 0, 0.5)
+}
